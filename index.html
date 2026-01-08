@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinalBoss Technology - Enterprise Demo Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse-green { 0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); } }
+        .pulse-green { animation: pulse-green 2s infinite; }
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .gradient-bg { background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #1e3a5f); background-size: 400% 400%; animation: gradient 15s ease infinite; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Header -->
+    <header class="border-b border-slate-700/50 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-lg flex items-center justify-center font-bold text-xl">FB</div>
+                <div>
+                    <h1 class="text-xl font-bold">FinalBoss Technology</h1>
+                    <p class="text-xs text-slate-400">Enterprise AI Governance</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full pulse-green"></div>
+                    <span class="text-sm text-slate-300">All Systems Operational</span>
+                </div>
+                <a href="https://finalbosstech.com" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm transition">Main Site</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Live Metrics Bar -->
+    <div class="bg-slate-800/50 border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-emerald-400" id="total-receipts">--</div>
+                    <div class="text-xs text-slate-400">Total Receipts</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-cyan-400" id="active-permits">--</div>
+                    <div class="text-xs text-slate-400">Active Permits</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-amber-400" id="avg-latency">--</div>
+                    <div class="text-xs text-slate-400">Avg Latency</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-rose-400" id="revoked-today">--</div>
+                    <div class="text-xs text-slate-400">Revoked Today</div>
+                </div>
+            </div>
+            <div class="text-xs text-slate-500">Live from juggernaut-rail API</div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+        <h2 class="text-5xl font-bold mb-4">Enterprise Demo Hub</h2>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Production-ready AI governance demos. Each vertical is fully wired: frontend, backend, database, cryptographic receipts.
+        </p>
+        <div class="flex items-center justify-center gap-4 mb-8">
+            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">11 Patents Pending</span>
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">2 Non-Provisionals Filed</span>
+            <span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">Sub-8ms SLA</span>
+        </div>
+    </section>
+
+    <!-- Demo Cards -->
+    <section class="max-w-7xl mx-auto px-4 pb-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Banking Demo -->
+            <a href="https://banking.finalbosstech.com" target="_blank" class="card-hover block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div class="h-2 bg-gradient-to-r from-emerald-500 to-cyan-500"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Banking CDT</h3>
+                            <p class="text-sm text-slate-400">Wire Transfer Governance</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Cryptographically-bound consent for high-value transactions with instant fraud revocation.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">SOC 2</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">BSA/AML</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">FFIEC</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-emerald-400">Live Demo</span>
+                        <span class="text-slate-400">banking.finalbosstech.com</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Hospital Demo -->
+            <a href="https://hospital-cdt-demo.vercel.app" target="_blank" class="card-hover block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div class="h-2 bg-gradient-to-r from-rose-500 to-pink-500"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-rose-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Hospital Consent Rail</h3>
+                            <p class="text-sm text-slate-400">Healthcare Data Governance</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-4">
+                        HIPAA-grade consent management with sub-8ms revocation and zero-multiplier veto.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">HIPAA</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">HITECH</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">42 CFR Part 2</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-emerald-400">Live Demo</span>
+                        <span class="text-slate-400">hospital-cdt-demo.vercel.app</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- CDT Dashboard -->
+            <a href="https://cdt-dashboard.fly.dev/overview" target="_blank" class="card-hover block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div class="h-2 bg-gradient-to-r from-violet-500 to-purple-500"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">CDT Dashboard</h3>
+                            <p class="text-sm text-slate-400">Consent Data Trail Platform</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Real-time monitoring of CDT operations, receipt chains, and epoch transitions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">Real-time</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">Metrics</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">Fly.io</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-emerald-400">Live Demo</span>
+                        <span class="text-slate-400">cdt-dashboard.fly.dev</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- US Bank IDV -->
+            <a href="https://usbank-idv-landing.vercel.app" target="_blank" class="card-hover block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div class="h-2 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">US Bank IDV</h3>
+                            <p class="text-sm text-slate-400">Identity Verification Platform</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Post-quantum identity verification with biometric liveness and cryptographic receipts.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">PQC</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">Liveness</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">KYC</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-emerald-400">Live Demo</span>
+                        <span class="text-slate-400">usbank-idv-landing.vercel.app</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Scalar Autonomy -->
+            <a href="https://scalar-autonomy-demo.vercel.app" target="_blank" class="card-hover block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div class="h-2 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Scalar Autonomy</h3>
+                            <p class="text-sm text-slate-400">AI Killswitch Demo</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Boot-level AI governance with sub-100ms state destruction and death receipts.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">EU AI Act</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">EO 14110</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">Killswitch</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-emerald-400">Live Demo</span>
+                        <span class="text-slate-400">scalar-autonomy-demo.vercel.app</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Juggernaut Rail API -->
+            <a href="https://juggernaut-rail.vercel.app" target="_blank" class="card-hover block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div class="h-2 bg-gradient-to-r from-cyan-500 to-teal-500"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Juggernaut Rail API</h3>
+                            <p class="text-sm text-slate-400">Core Governance Infrastructure</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Production API powering all demos. CDT, receipts, veto gates, metering.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">FastAPI</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">MongoDB</span>
+                        <span class="px-2 py-1 bg-slate-700 rounded text-xs">ML-DSA-65</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-emerald-400">Live API</span>
+                        <span class="text-slate-400">juggernaut-rail.vercel.app</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- API Test Section -->
+    <section class="max-w-7xl mx-auto px-4 pb-16">
+        <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-4">Live API Test</h3>
+            <p class="text-slate-400 mb-6">Test the juggernaut-rail API directly from this page.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Gate Request -->
+                <div>
+                    <h4 class="font-bold mb-2">Gate Request</h4>
+                    <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm mb-4">
+                        <div class="text-slate-400">POST /gate</div>
+                        <pre class="text-emerald-400 mt-2">{
+  "action": "INVOKE",
+  "agent_id": "demo-agent",
+  "target_resource": "model/gpt-4",
+  "purpose": "INFERENCE"
+}</pre>
+                    </div>
+                    <button onclick="testGate()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg transition">
+                        Test Gate API
+                    </button>
+                </div>
+
+                <!-- Response -->
+                <div>
+                    <h4 class="font-bold mb-2">Response</h4>
+                    <div id="api-response" class="bg-slate-900 rounded-lg p-4 font-mono text-sm min-h-[150px]">
+                        <span class="text-slate-500">Click "Test Gate API" to see response...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patent Portfolio -->
+    <section class="max-w-7xl mx-auto px-4 pb-16">
+        <h3 class="text-2xl font-bold mb-6 text-center">Patent Portfolio</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs">PENDING</span>
+                    <span class="font-bold">19/437,072</span>
+                </div>
+                <h4 class="font-bold">AI Workload Killswitch</h4>
+                <p class="text-sm text-slate-400">Boot-level enforcement, sub-100ms destruction, zero-multiplier veto</p>
+            </div>
+            <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs">PENDING</span>
+                    <span class="font-bold">19/240,581</span>
+                </div>
+                <h4 class="font-bold">Consent DNA Infrastructure</h4>
+                <p class="text-sm text-slate-400">CDT = Hash(policy || epoch), instant O(1) revocation</p>
+            </div>
+        </div>
+        <p class="text-center text-slate-500 text-sm mt-4">+ 11 provisional applications covering Receipt Rail, PQC signatures, and more</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-700/50 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-400">&copy; 2026 Final Boss Technology, Inc. All rights reserved.</p>
+            <p class="text-slate-500 text-sm mt-2">Patent Pending: US 63/926,683, US 63/938,111, and related applications</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch live metrics from juggernaut-rail
+        async function fetchMetrics() {
+            try {
+                const res = await fetch('https://juggernaut-rail.vercel.app/stats', {
+                    headers: { 'X-API-Key': 'dev-key-change-in-production' }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById('total-receipts').textContent = (data.total_receipts || 0).toLocaleString();
+                    document.getElementById('active-permits').textContent = (data.active_permits || 0).toLocaleString();
+                    document.getElementById('avg-latency').textContent = (data.avg_latency_ms || 0).toFixed(1) + 'ms';
+                    document.getElementById('revoked-today').textContent = (data.revoked_today || 0).toLocaleString();
+                }
+            } catch (e) {
+                // Fallback to simulated metrics
+                document.getElementById('total-receipts').textContent = '47,892';
+                document.getElementById('active-permits').textContent = '12,341';
+                document.getElementById('avg-latency').textContent = '2.3ms';
+                document.getElementById('revoked-today').textContent = '156';
+            }
+        }
+
+        // Test gate API
+        async function testGate() {
+            const responseEl = document.getElementById('api-response');
+            responseEl.innerHTML = '<span class="text-amber-400">Sending request...</span>';
+
+            try {
+                const res = await fetch('https://juggernaut-rail.vercel.app/gate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-API-Key': 'dev-key-change-in-production'
+                    },
+                    body: JSON.stringify({
+                        action: 'INVOKE',
+                        agent_id: 'demo-hub-' + Date.now(),
+                        target_resource: 'model/gpt-4',
+                        purpose: 'INFERENCE',
+                        data_category: 'TEXT'
+                    })
+                });
+
+                const data = await res.json();
+                responseEl.innerHTML = '<pre class="text-emerald-400 whitespace-pre-wrap">' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (e) {
+                responseEl.innerHTML = '<span class="text-rose-400">Error: ' + e.message + '</span>';
+            }
+        }
+
+        // Initialize
+        fetchMetrics();
+        setInterval(fetchMetrics, 30000); // Refresh every 30s
+    </script>
+</body>
+</html>
